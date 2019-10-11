@@ -66,22 +66,48 @@ class ViewController: UIViewController {
         /*
           Hausnummer
          */
-//        let order12 = randomIndex >= randomIndex1 // 1 > 2 // 2 > 1
-//        let order13 = randomIndex >= randomIndex2 // 1 > 3 // 3 > 1
-//        let order23 = randomIndex1 >= randomIndex2 // 2 > 3 // 3 > 2
-//
-//
-//        let order123 = order12 && order13 && order23
-//
-//        let order312 = !order12 && order13 && !order23
-//
-//        if ( order123 ) {
-//        schockTextView.text =  String.init(zahlenArray[randomIndex] + zahlenArray[randomIndex1] + zahlenArray[randomIndex2])
-//        }
-//
-//        if ( order312 ) {
-//            schockTextView.text =  String.init(zahlenArray[randomIndex2] + zahlenArray[randomIndex] + zahlenArray[randomIndex])
-//        }
+        let order12 = randomIndex >= randomIndex1
+        
+        let order13 = randomIndex >= randomIndex2
+        
+        let order23 = randomIndex1 >= randomIndex2
+
+
+        let order123 = order12 && order23
+
+        let order321 = !order12 && !order23
+        
+        let order132 = order13 && !order23
+        
+        let order231 = order23 && !order13
+        
+        let order213 = !order12 && order13
+        
+        let order312 = !order13 && order12
+
+        if ( order123 ) {
+            schockTextView.text =  String.init(zahlenArray[randomIndex] + zahlenArray[randomIndex1] + zahlenArray[randomIndex2])
+        }
+
+        if ( order312 ) {
+            schockTextView.text =  String.init(zahlenArray[randomIndex2] + zahlenArray[randomIndex] + zahlenArray[randomIndex1])
+        }
+        
+        if ( order132 ) {
+            schockTextView.text =  String.init(zahlenArray[randomIndex] + zahlenArray[randomIndex2] + zahlenArray[randomIndex1])
+        }
+        
+        if ( order231 ) {
+            schockTextView.text =  String.init(zahlenArray[randomIndex1] + zahlenArray[randomIndex2] + zahlenArray[randomIndex])
+        }
+        
+        if ( order213 ) {
+            schockTextView.text =  String.init(zahlenArray[randomIndex1] + zahlenArray[randomIndex] + zahlenArray[randomIndex2])
+        }
+        
+        if ( order321 ) {
+            schockTextView.text =  String.init(zahlenArray[randomIndex2] + zahlenArray[randomIndex1] + zahlenArray[randomIndex])
+        }
         
         /*
          Schock + zahl
