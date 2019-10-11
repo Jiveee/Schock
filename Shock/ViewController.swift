@@ -66,9 +66,9 @@ class ViewController: UIViewController {
         /*
           Hausnummer
          */
-//        let order12 = randomIndex >= randomIndex1 // 1 > 2
-//        let order13 = randomIndex >= randomIndex2 // 1 > 3
-//        let order23 = randomIndex1 >= randomIndex2 // 2 > 3
+//        let order12 = randomIndex >= randomIndex1 // 1 > 2 // 2 > 1
+//        let order13 = randomIndex >= randomIndex2 // 1 > 3 // 3 > 1
+//        let order23 = randomIndex1 >= randomIndex2 // 2 > 3 // 3 > 2
 //
 //
 //        let order123 = order12 && order13 && order23
@@ -122,7 +122,7 @@ class ViewController: UIViewController {
             }
             
             else {
-                // Funktioniert
+            
                 if (zahlenArray[randomIndex] == " eins ") {
                     if (zahlenArray[randomIndex2] == " eins ") {
                         switch zahlenArray[randomIndex1] {
