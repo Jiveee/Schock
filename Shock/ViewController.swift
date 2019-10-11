@@ -86,7 +86,7 @@ class ViewController: UIViewController {
         /*
          Schock + zahl
          */
-        if ( zahlenArray[randomIndex] == " eins " ) {
+        if (zahlenArray[randomIndex] == " eins ") {
             
             if (zahlenArray[randomIndex1] == " eins ") {
                 
@@ -187,7 +187,7 @@ class ViewController: UIViewController {
         /*
          Jule
          
-         4 4 2
+         
          */
         if (zahlenArray[randomIndex] == " eins " || zahlenArray[randomIndex] == " vier " || zahlenArray[randomIndex] == " zwei ") {
             
